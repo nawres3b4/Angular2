@@ -1,0 +1,15 @@
+<h3> Exercixe2</h3>
+
+<h2>{{titre}}</h2>
+
+<h5>articleex2 list </h5>
+<table class="table">
+    <tr><th>titre</th><th>auteur date </th><th>contenu</th></tr>
+    <tr *ngFor="let Articletp2 of listArctile2 ">
+      <td>{{ Articletp2.titre }}</td>
+      <td>{{ Articletp2.auteur }}  - {{ Articletp2.date }}</td>
+      <td>{{ Articletp2.contenu }}</td>
+</tr>
+</table>
+
+  

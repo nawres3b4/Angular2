@@ -1,0 +1,25 @@
+<p>offres-emploi works!</p>
+
+<h3>Exercice1</h3>
+<h2>article list </h2>
+<form class="form-group">
+
+<div>
+<label for="entreprise">Entreprise :</label>
+<input type="text" class="form-control" name="entreprise" [(ngModel)]="entrepriseRecherchee">
+<table class="table">
+<tr><th>reference</th><th>titre</th><th>entreprise</th><th>etat</th></tr>
+<tbody *ngFor="let Article of EmploiList ">
+<tr *ngIf ="Article.entreprise== entrepriseRecherchee|| Article.entreprise=='' " >
+<td>{{Article.reference}}</td>
+<td>{{Article.titre}}</td>
+<td>{{Article.entreprise}}</td>
+<td>{{Article.etat}}</td>
+
+<td><button [disabled]="Article.etat==false"> postuler</button></td>
+</tr>
+</tbody>
+<td> calculer le nombre des offres d'emploi non clôturées. {{sum}}</td>
+<td> <button  (click)="calculer()">Bilan</button></td>
+
+</table>
