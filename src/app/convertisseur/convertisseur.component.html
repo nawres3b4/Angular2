@@ -1,0 +1,10 @@
+<div style="margin-left: 150px; margin-top: 100px;margin-bottom: 50px"> 
+    <label style="color: rgb(25, 109, 188);margin-right: 20px;" for="montant">Saisir Montant à Convertir : </label>
+    <input type="number" name="montant" [(ngModel)]="Montant" />
+    </div>
+    
+    <div>
+        <app-to-euro-convert [Montant]="Montant" (sender)="recap($event)"></app-to-euro-convert>
+    </div>
+    
+    <h2  style="color: green; margin-left: 150px;">Convertion en Euro $ : {{MontantConvert}}</h2>
